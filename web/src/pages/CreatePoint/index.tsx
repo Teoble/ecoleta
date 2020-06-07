@@ -86,7 +86,7 @@ const CreatePoint: React.FC = () => {
 
   function handleMapClick(event: LeafletMouseEvent) {
     setSelectedPosition([
-        event.latlng.lat, 
+        event.latlng.lat,
         event.latlng.lng
     ]);
   }
@@ -125,7 +125,7 @@ const CreatePoint: React.FC = () => {
     const items = selectedItems;
 
     const data = new FormData();
-    
+
     data.append('name', name);
     data.append('email', email);
     data.append('whatsapp', whatsapp);
@@ -169,7 +169,7 @@ const CreatePoint: React.FC = () => {
 
                 <div className="field">
                     <label htmlFor="name">Nome da Entidade</label>
-                    <input 
+                    <input
                         type="text"
                         name="name"
                         id="name"
@@ -180,7 +180,7 @@ const CreatePoint: React.FC = () => {
                 <div className="field-group">
                     <div className="field">
                         <label htmlFor="email">E-mail</label>
-                        <input 
+                        <input
                             type="email"
                             name="email"
                             id="email"
@@ -189,7 +189,7 @@ const CreatePoint: React.FC = () => {
                     </div>
                     <div className="field">
                         <label htmlFor="whatsapp">WhatsApp</label>
-                        <input 
+                        <input
                             type="text"
                             name="whatsapp"
                             id="whatsapp"
@@ -206,7 +206,7 @@ const CreatePoint: React.FC = () => {
                 </legend>
 
                 <Map center={initialPosition} zoom={15} onClick={handleMapClick} >
-                    <TileLayer 
+                    <TileLayer
                         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
